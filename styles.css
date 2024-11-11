@@ -1,126 +1,122 @@
-/* Resetting body styles */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Times, "Times New Roman", Georgia, serif;
-  color: #333333;
-  font-size: 14px;
-  max-width: 1024px;
-  margin: 0 auto;
+  margin: 0; /*this sets the default browser margin to zero as required in the wirefram and styleguide*/
+  padding: 0; /*this removed the padding on the page*/
+  font-family: Times, "Times New Roman", Georgia, serif; /*the styleguide required times new roman and now users will see the text displayed as such*/
+  color: #333333; /*here the colour of the text is set to grey making readability much easier for users*/
+  font-size: 14px; /*here the font size is set to the required one*/
+  max-width: 1024px; /*I chose to add a maximum width to be displayed so that my layout doesn't stretch on a users larger screen*/
+  margin: 0 auto; /*my page will be centred and much more readable*/
 }
 
-/* Header styling */
+
 header {
-  background-color: #333333;
+  background-color: #333333; /*my header has a grey background colour*/
 }
 
 header nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+  display: flex; /*flexbox improves the users experience as the navigation links are lined up and easier to distinguish*/
+  justify-content: space-around; /*this line adds equal spacing between my links and so the content on the page looks cohesive and structured*/
+  padding: 10px; /*this will add some padding around the navigation area so that users can easily identify the header*/
 }
 
 header nav a {
-  color: #fefefe;
-  font-size: 120%;
-  text-decoration: none;
+  color: #fefefe; /*this gives the text a white colour which is great for visibility and standing out against the grey header background*/
+  font-size: 120%; /*here i'm following the font size styleguide*/
+  text-decoration: none; /*it's easier to remove the underlining of the links so I can adjust the borders under it*/
   padding-bottom: 5px;
 }
 
-header nav a.current {
-  border-bottom: 3px solid #ff0000;
+header nav a.open {
+  border-bottom: 3px solid #ff0000; /*this red underline mentioned in the styleguide allows for the current page to be very clear*/
 }
 
 header nav a:hover,
 header nav a:focus {
-  border-bottom: 3px solid #ff0000;
+  border-bottom: 3px solid #ff0000; /*this red underline mentioned in the styleguide allows for the current user focus to be highlighted*/
 }
 
-/* Page title styling */
-.page-title {
-  text-align: center;
-  margin-top: 20px;
+/*the title page tells us what the webpage is all about*/
+.title {
+  text-align: center; /*the title text is aligned to the center*/
+  margin-top: 20px; /*the header and the title need space in order to be visually seperated*/
 }
 
-.page-title h1 {
-  font-size: 2em;
-  margin: 0;
+.title h1 {
+  font-size: 2em; /*the main title size is set here according to the styleguide making it prominent for users*/
+  margin: 0; /*default margins removed to keep the title close to the subtitle*/
 }
 
-.page-title p {
-  margin: 0;
+.title p {
+  margin: 0; /*removing margin keeps subtitle text aligned closely with the main title*/
 }
 
-/* Main content area layout */
 .content {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
-  margin-top: 20px;
+  display: grid; /*using grid layout provides flexibility for both the gallery and news sections*/
+  grid-template-columns: 3fr 1fr; /*allocating 3 parts for gallery and 1 part for news follows the layout requirements*/
+  gap: 20px; /*adds clear spacing between sections for readability*/
+  margin-top: 20px; /*spacing added to visually separate this section from the title area*/
 }
 
-/* Gallery styling */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  display: grid; /*grid layout here allows gallery items to be displayed in rows and columns*/
+  grid-template-columns: repeat(3, 1fr); /*creates three equal-width columns for gallery items*/
+  gap: 10px; /*adds space between gallery items, making each picture more distinct*/
 }
 
-.gallery-item {
-  position: relative; /* Positioning for the description */
+.gallerypicture {
+  position: relative; /*positioning relative allows overlay elements like captions to align within the gallery container*/
 }
 
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
-  transition: transform 0.3s;
+.gallerypicture img {
+  width: 100%; /*image width set to fill container without stretching and this provides a cleaner look*/
+  height: auto; /*height is auto to maintain aspect ratio, keeping images undistorted for all users*/
+  border: 1px solid #ccc; /*border around images provides a soft frame that separates each item visually*/
+  transition: transform 0.3s; /*smooth hover effect enhances interactivity without overwhelming users*/
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
+.gallerypicture:hover img {
+  transform: scale(1.05); /*subtle zoom effect on hover to engage users, adding a touch of dynamism*/
 }
 
-.gallery-item span {
-  display: block; /* Show the title always */
-  text-align: center;
-  color: #333333;
-  font-size: 0.9em;
-  margin-top: 5px;
+.gallerypicture span {
+  display: block; /*span displayed as a block aligns it below the image*/
+  text-align: center; /*aligning the caption centrally gives a neat, balanced look*/
+  color: #333333; /*grey color used here for readability and to keep focus on the image*/
+  font-size: 0.9em; /*font size slightly reduced for secondary information like captions*/
+  margin-top: 5px; /*margin added to separate the image and caption slightly*/
 }
 
-.gallery-item .description {
-  display: none; /* Hide the description by default */
-  position: absolute; /* Position it over the image */
-  bottom: 0; /* Align it at the bottom of the image */
+.gallerypicture .description {
+  display: none; /*description hidden by default to keep gallery layout uncluttered*/
+  position: absolute; /*positioned absolutely for overlaying on the image*/
+  bottom: 0; /*anchored to the bottom of the image for ease of reading*/
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: white;
-  padding: 5px;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /*semi-transparent black background used to make text readable without obscuring the image*/
+  color: white; /*white text provides high contrast for readability on a dark overlay*/
+  padding: 5px; /*padding around text adds visual separation from the image edges*/
+  text-align: center; /*centers the text for a structured, easy-to-read overlay*/
 }
 
-.gallery-item:hover .description {
-  display: block; /* Show the description on hover */
+.gallerypicture:hover .description {
+  display: block; /*this description appears on hover and adds extra information interactively*/
 }
 
-/* News sidebar styling */
 .news h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.5em; /*slightly larger font size for the news header to distinguish it as a section title*/
+  margin-bottom: 10px; /*small margin below header for spacing, separating it from news items*/
 }
 
 .news-item {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /*spacing between news items for readability and visual clarity*/
 }
 
 .news-item h3 {
-  margin: 0;
-  font-size: 1.1em;
+  margin: 0; /*no margin keeps title and date text grouped together neatly*/
+  font-size: 1.1em; /*following style guide requirements, slightly larger font emphasizes news titles*/
 }
 
 .news-item p {
-  margin: 0;
-  font-size: 0.9em;
+  margin: 0; /*no extra margin needed as these elements are tightly grouped for a compact news item layout*/
+  font-size: 0.9em; /*the different font size differentiates this from main page content*/
 }
