@@ -3,9 +3,15 @@
 <html lang="en">
 <!--the language of my html document is clear allowing for ease of auto-translation tools built into most browsers-->
 
-<body>
+<head> 
+  <!--these tags contain all the metadata about my title-->
+  <meta charset="UTF-8"><!--this meta element gives info about the character set being used (utf-8) and allows for accessibility to read the text across many platforms for users-->
+  <title>Walton Hall Museum of Odds & Ends</title><!--clear title of my webpage making the following content coherent-->
+  <link rel="stylesheet" href="styles.css"><!--this is the link to my associated CSS style sheet-->
+</head>
 
-  <header><!--the header seperates the navigation from the rest of the website-->
+<body>
+  <header><!--the header separates the navigation from the rest of the website-->
     <!--by having a clear header it improves structure and accessibility when navigating the webpage-->
     <nav><!--within the header is our navigation bar containing clear links to placeholder.html-->
       <a href="index.html" class="open">Museum of Odds & Ends</a><!--the page currently opened is linked to my open class highlighting it for enhanced readability-->
@@ -16,16 +22,18 @@
   </header>
 
   <main>
-          <!--I wraped the page title inside a semantic section element for better structure and emphasis-->
-    <section class="title"><!--links to my title class in the css folder which follows the title style guide-->
+    <!--I wrapped the page title inside a semantic section element for better structure and emphasis-->
+    <section class="title"><!--links to my title class in the CSS folder which follows the title style guide-->
       <h1>Museum of Odds & Ends</h1>
       <p>Walton Hall, Milton Keynes</p>
     </section>
 
     <div class="content">
       <section class="gallery"><!--within this section I have specified the gallery items will be held here for better readability-->
-        <a href="https://www.europeana.eu/en/item/440/item_UBMLSJFMKZCDOGRRMBW2UY5RDAL3V4IP" class="gallerypicture"><!--href links my actual link to my gallery picture class in css-->
-          <img src="imgs/1.jpeg" alt="Budapest Chain Bridge"><!--here I've linked the image from imgs into my gallery section and alt allows for a brief description for those having accessibility trouble to use screen readers-->
+        <a href="https://www.europeana.eu/en/item/440/item_UBMLSJFMKZCDOGRRMBW2UY5RDAL3V4IP" class="gallerypicture">
+          <!--href links my actual link to my gallery picture class in CSS-->
+          <img src="imgs/1.jpeg" alt="Budapest Chain Bridge">
+          <!--here I've linked the image from imgs into my gallery section and alt allows for a brief description for those having accessibility trouble to use screen readers-->
           <span>Budapest Chainbridge</span>
           <div class="description">A historic bridge connecting Buda and Pest.</div>
         </a>
@@ -49,13 +57,13 @@
         </a>
         
         <a href="https://www.europeana.eu/en/item/2064116/Museu_ProvidedCHO_Nationalmuseum__Sweden_18600" class="gallerypicture">
-          <img src="imgs/10.jpeg" alt="Oilpainting of Ettingen Village">
+          <img src="imgs/10.jpeg" alt="An oilpainting of Ettingen Village">
           <span>Oilpainting of Ettingen Village</span>
           <div class="description">A serene depiction of three riders at sunset.</div>
         </a>
 
         <a href="https://www.europeana.eu/en/item/2021009/_49F3124C23DA8F15FB71B05E19A14B0A" class="gallerypicture">
-          <img src="imgs/8.jpeg" alt="Fashion artist Riitta Immonen">
+          <img src="imgs/8.jpeg" alt="Picture of fashion artist Riitta Immonen">
           <span>Fashion artist Riitta Immonen</span>
           <div class="description">A charming illustration by a notable fashion artist.</div>
         </a>
@@ -78,11 +86,4 @@
   </main>
 
 </body>
-
-<head> <!--these tags contain all the metadata about my title-->
-  <meta charset="UTF-8"><!--this meta element gives info about the character set being used (utf-8) and allows for accessibility to read the text across many platforms for users-->
-  <title>Walton Hall Museum of Odds & Ends</title><!--clear title of my webpage making the following content coherent-->
-  <link rel="stylesheet" href="styles.css"><!--this is the link to my associated CSS style sheet,-->
-</head>
-
-</html><!--end of my webpage html code-->
+</html><!--end of my webpage HTML code-->
